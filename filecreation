@@ -1,0 +1,11 @@
+#!/bin/bash 
+filename=$1
+text=$2 
+
+if [[ -f "$filename" && -w "$filename" ]]
+then 
+     echo $text > $filename
+else 
+     touch $filename 
+ echo $text > $filename 
+fi
